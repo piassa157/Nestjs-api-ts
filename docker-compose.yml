@@ -1,0 +1,30 @@
+version: '3'
+
+services: 
+
+  app:
+    build:
+    container_name: nestjs_with_docker
+    entrypoint: ./.docker/entrypoint.sh
+    ports: 
+      - 3000:3000
+    volumes: 
+      - .:/home/node/app
+    
+  db:
+    image: mysql:5.7
+    container_name: db_nestJs
+    restart: always
+    tty: true
+    ports: 
+      - "33006:3306"
+    volumes: 
+      - ./.docker/dbdata:/var/lib/mysql
+    environment: 
+      - MYSQL_DATABASE=db_nestJs
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=root
+    
+volumes: 
+  db_nestJs:
+    external: true
