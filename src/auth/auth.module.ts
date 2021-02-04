@@ -13,10 +13,10 @@ import { AuthController } from "./auth/controllers/auth.controller";
       type: "postgres",
       host: "ec2-54-90-13-87.compute-1.amazonaws.com",
       port: 5432,
-      username: "xpvasousuaoffv",
+      username: "oyyyxkdwyfbcjk",
       password:
-        "69e82f5026529b69dccc376c52f08974cae0c02e3d6d387d1843af5e717992d8",
-      database: "da73jvqcct1f36",
+        "526fd5dc7e275499d1e519516ed341d9456ae7d797a039670c12c0e7a5e2289c",
+      database: "d3v5l2kspl2v82",
       entities: [__dirname + "/**/*.entity{.ts,.js}"],
       synchronize: true,
     }),
